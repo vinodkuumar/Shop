@@ -22,7 +22,10 @@ const ProductDetailScreen = props => {
 
   return (
     <ScrollView>
-      <Image style={styles.image} source={{ uri: selectedProduct.imageUrl }} />
+      <Image 
+      style={styles.image} 
+      source={{ uri: selectedProduct.imageUrl }}
+      resizeMode="cover" />
       <View style={styles.actions}>
         <Button
           color={Colors.primary}
@@ -54,7 +57,7 @@ export const screenOptions = navData => {
 const styles = StyleSheet.create({
   image: {
     width: '100%',
-    height: 300
+    height: 300,
   },
   actions: {
     marginVertical: 10,
